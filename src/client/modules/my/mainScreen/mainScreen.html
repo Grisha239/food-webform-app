@@ -1,0 +1,77 @@
+<template>
+    <div style="font-size: 13px;">
+        <datalist id="time-picker-values">
+            <template for:each={timeTable} for:item="option">
+                <option key={option} value={option}></option>
+            </template>
+        </datalist>
+        <label class="form-label" for="validationCustom000" style="margin-bottom: 10px">{questionData.name.value}</label>
+        <div class="row">
+            <template if:true={showClick2Call}>
+                <div class="col-3" style="margin-bottom: 15px">
+                    <select class="form-select" id="validationCustom000" data-field="contactPhones" onchange={handleFieldChange}>
+                        <template for:each={questionData.contactPhones.allValues} for:item="option">
+                            <option key={option.Id} selected={option.Selected} value={option.Number}>
+                                {option.Number} </option>
+                        </template>
+                    </select>
+                </div>
+                <div class="col" style="padding-left: 0">
+                    <button id="click-2-call" data-bs-toggle="button" class="btn btn-success" style="height: 35px; width: 40px" onclick={handleClickToCall}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-telephone" width="100%" height="">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </template>
+            <template if:false={showClick2Call}>
+                <p class="form-hint" style="margin-bottom: 5px">{questionData.noContactPhonesMessage.label}</p>
+            </template>
+        </div>
+        <form class="row g-2 needs-validation " novalidate="">
+            <select class="form-select" id="validationCustom001" data-field="name" required onchange={handleFieldChange}>
+                <template for:each={questionData.name.allValues} for:item="option">
+                    <option key={option.Id} selected={option.Selected} value={option.Name}>
+                        {option.Name} </option>
+                </template>
+            </select>
+            <label class="form-label form-hint">{questionData.subject.label}</label>
+            <label class="form-label">{pageInfo.title}</label>
+            <label class="form-label">{questionData.result.label}</label>
+            <select class="form-select" id="validationCustom002" data-field="result" required onchange={handleFieldChange}>
+                <template for:each={questionData.result.allValues} for:item="option">
+                    <option key={option.Id} selected={option.Selected} value={option.Name}>
+                        {option.Name} </option>
+                </template>
+            </select>
+            <div class="col-md-12">
+                <label for="validationCustom003" class="form-label">{questionData.detailedResult.label}<b style="color: #ee3322"> *</b></label>
+                <textarea rows="4" class="form-control" data-field="detailedResult" id="validationCustom003"
+                     onchange={handleFieldChange} required>{questionData.detailedResult.value}</textarea>
+            </div>
+            <div class="col-md-12">
+                <div class="form-check">
+                    <label for="validationCustom004" class="form-label">{questionData.goOffer.label}</label>
+                    <input class="form-check-input" type="checkbox" id="validationCustom004" data-field="goOffer"
+                           oninput={handleFieldChange} checked={questionData.goOffer.value}>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-check">
+                    <label for="validationCustom005" class="form-label">{questionData.goQuestionnaire.label}</label>
+                    <input class="form-check-input" type="checkbox" id="validationCustom005" data-field="goQuestionnaire"
+                           oninput={handleFieldChange} checked={questionData.goQuestionnaire.value}>
+                </div>
+            </div>
+        </form>
+
+        <br>
+
+        <template if:false={callIsMade}>
+            <p style="margin-bottom: 5px">{questionData.invalidCallAttempt.label}<b style="color: #ff0000"> *</b></p>
+        </template>
+        <div class="col-md-12 buttons-container float-end">
+            <button class="next-button" onclick={handleNextClick}>{nextClickMessage}</button>
+        </div>
+    </div>
+</template>

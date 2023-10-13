@@ -1,0 +1,100 @@
+{
+  "backMessage": "Back",
+  "nextMessage": "Next",
+  "completeMessage": "Complete",
+  "successfulCall": {
+    "label": "Managed to get through?",
+    "labelYes": "Yes",
+    "labelNo": "No",
+    "labelLater": "No need to call"
+  },
+  "comment": {
+    "label": "Comment",
+    "value": "Didn't get through"
+  },
+  "unsuccessfulCall": {
+    "label": "Didn't get through"
+  },
+  "whyUnsuccessful": {
+    "label": "Why?",
+    "labelYes": "Сommunicated with a client less than two weeks ago",
+    "labelNo": "Fall reason is known",
+    "labelLater": "Other"
+  },
+  "whatIsDeclineReason": {
+    "label": "What is the fall reason?"
+  },
+  "readyToTalk": {
+    "label": "Is it comfortable to talk?",
+    "labelYes": "Yes",
+    "labelNo": "No"
+  },
+  "whenToCall": {
+    "label": "When to recall?"
+  },
+  "callResultUnsuccessful": {
+    "label": "Phone Result",
+    "value": "Uncomfortable to talk"
+  },
+  "uncomfortableToTalk": {
+    "label": "Uncomfortable to talk"
+  },
+  "declineReason": {
+    "label": "What is the fall reason?",
+    "selected":[{
+      "label": "No Need",
+      "selected": false
+    }, {
+      "label": "Seasonality",
+      "selected": false
+    }, {
+      "label": "Have their own transport",
+      "selected": false
+    }, {
+      "label": "Have their own agreement / new agreement",
+      "selected": false
+    }, {
+      "label": "Financial difficulties",
+      "selected": false
+    }, {
+      "label": "Problems with payment",
+      "selected": false
+    }, {
+      "label": "Actually growth",
+      "selected": false
+    }, {
+      "label": "Expensive / decoupling",
+      "selected": false
+    }, {
+      "label": "Сorporate client is dissatisfied with the service",
+      "selected": false
+    }, {
+      "label": "Other",
+      "selected": false
+    }]
+  },
+  "callResultSuccessful": {
+    "label": "Phone Result"
+  },
+  "nextCallDate": {
+    "label": "Plan next call? When?"
+  },
+  "nextCallSubject": {
+    "label": "Next Call Goal"
+  },
+  "sendEmail": {
+    "label": "Need to send a letter to a client?",
+    "labelYes": "Yes",
+    "labelNo": "No"
+  },
+  "emailSubject": {
+    "label": "Email Goal",
+    "value": "Send a letter after the conversation"
+  },
+  "unsuccessfulCallAttempt": {
+    "label": " Attempt "
+  },
+  "invalidCallAttempt": {
+    "label": "You didn't make a call. Make a call from the task to continue."
+  }
+}

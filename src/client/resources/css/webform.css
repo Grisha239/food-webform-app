@@ -1,0 +1,203 @@
+.center {
+    text-align: center;
+}
+.link {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #ff6000;
+    color: white;
+    margin-left: 33%;
+    margin-right: 33%;
+    display: inline-block;
+    margin-top: 1em;
+}
+.info {
+    color: black;
+    background-color: #e4f2f8;
+    margin: auto;
+    padding: 15px 10px;
+    text-align: left;
+    width: 300px;
+    border-radius: 5px;
+}
+.code {
+    font-family: monospace;
+}
+.container {
+    margin-top: 30px;
+}
+
+img {
+    max-width: 150px;
+}
+
+.form-label, .form-check-label, .form-select, .form-control {
+    font-size: 13px;
+    color: #000000;
+    font-family: "Bpmonline Open Sans", "Regular", sans-serif;
+}
+
+input, b, p, li, textarea, select {
+    font-size: 13px;
+    font-family: "Bpmonline Open Sans", "Regular", sans-serif;
+}
+
+.form-check-input {
+    box-sizing: border-box;
+    font-size: 16px;
+    border-width: 2.5px;
+    font-family: "Bpmonline Open Sans";
+    border-bottom-color: #aaaaaa;
+    border-left-color: #aaaaaa;
+    border-right-color: #aaaaaa;
+    border-top-color: #aaaaaa;
+    background-color: #ffffff;
+}
+
+.form-hint {
+    color: #999999;
+}
+
+.form-question {
+    color: black;
+    font-family: "Bpmonline Open Sans", "Regular", sans-serif;
+}
+
+.buttons-container{
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+}
+
+.next-button {
+    font-family: "Bpmonline Open Sans", "Regular", sans-serif;
+    padding: 0.33em 0.7em 0.39em 0.86em;
+    background: #22ac14;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-right: 0.6em;
+}
+
+.back-button {
+    font-family: "Bpmonline Open Sans", "Regular", sans-serif;
+    padding: 0.33em 0.7em 0.33em 0.7em;
+    background-color: #006CE0;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 0.6em;
+}
+
+input[type="datetime-local"] {
+    position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="datetime-local"]:after {
+    content: "\25BC";
+    color: #006CE0;
+    padding: 0 5px;
+}
+
+/* change color of symbol on hover */
+input[type="datetime-local"]:hover:after {
+    color: rgb(34, 172, 20);
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+/* adjust increase/decrease button */
+input[type="datetime-local"]::-webkit-inner-spin-button {
+    z-index: 1;
+}
+
+/* adjust clear button */
+input[type="datetime-local"]::-webkit-clear-button {
+ z-index: 1;
+}
+
+input[type="date"] {
+    position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="date"]:after {
+    content: "\25BC";
+    color: #006CE0;
+    padding: 0 5px;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+input[type="time"] {
+    position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+input[type="time"]:after {
+    content: "\25BC";
+    color: #006CE0;
+    padding: 0 5px;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+input[type="time"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
+}
+
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:visited {
+    background-color: #22ac14 !important;
+}
+
+.form-check-label {
+    padding-top: 3px;
+}
+
+.form-select {
+    font-size: 13px;
+}
+
+p {
+    margin-bottom: 0;
+}

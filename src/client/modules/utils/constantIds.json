@@ -1,0 +1,118 @@
+{
+  "ACTIVITY_CATEGORY": {
+    "ACTIVATION": "58e51151-29e4-4920-a0ae-83fe04fdf892",
+    "WELCOME_CALL": "8571846a-086d-4e0c-aeff-944cdba6b320",
+    "FIRST_CONTACT": "60b8af3a-7e91-4c94-a0e1-cac05b907833",
+    "CATCH_UP": "6d189084-3c09-4674-b5c6-843e0f6d0d6b",
+    "CONTROL_OF_FIRST_TRIP": "efbfc30e-6e3e-48a6-908c-3f50a021c2aa",
+    "SERVICE_PRESENTATION": "fe3db1ae-4540-4b10-bb97-e133e1e5c06c",
+    "LOST": "78ed2ab9-e040-4de8-bf7c-7151013c55c9",
+    "EMAIL": "f7d76d02-f466-4bdb-9522-a92ba7fb2438",
+    "IDENTIFYING_THE_DECISION_MAKER": "26eb7ceb-2d7a-41b8-9fbe-f5c22b8a7f8b",
+    "OTHER": "e343e1cf-498b-4804-94fc-99c4b628815d",
+    "OTHER2": "cf8fe86a-825e-4c0a-bf06-15dc24eada3e",
+    "UNDER_CONTROL": "aeb822a8-d53d-4148-8107-0ea4de907081",
+    "WAITING_FOR_REQUISITES": "c1d3efc4-2824-49f1-b4cb-46efe5ce8ae6",
+    "WORK_ON_CLIENTS_FALL": "7752201d-742a-468e-b5a7-28b13ec51f9b"
+  },
+
+  "ACTIVITY_PRIORITY": {
+    "MEDIUM": "ab96fa02-7fe6-df11-971b-001d60e938c6"
+  },
+
+  "ACTIVITY_STATUS": {
+    "OPEN": "0e5861f9-8456-45d9-81b2-e11c13dc67be",
+    "CLOSED": "e87b363a-8d5b-4ca0-b659-ff380a794886"
+  },
+
+  "ACTIVITY_TYPE": {
+    "ACTIVITY": "fbe0acdc-cfc0-df11-b00f-001d60e938c6",
+    "CALL": "e1831dec-cfc0-df11-b00f-001d60e938c6",
+    "EMAIL_AND_MESSENGER": "c4aa1d7c-4364-435b-8659-d4a6ae3a320b",
+    "EVENT": "952bd842-360e-4c1e-b3ab-2579910eed88",
+    "TASK": "3e85f6ce-e328-49de-a499-e515bce79eb8"
+  },
+
+  "CITIES": {
+    "KAZAN": "f5f2a0fe-62b9-455c-9d9d-4bc97882e71a",
+    "MOSCOW": "1c0b6b13-e8bb-df11-b00f-001d60e938c6",
+    "NIZHNY_NOVGOROD": "e9fc9657-c2bd-46c7-baff-d66ac5c9e285",
+    "SAINT_PETERSBURG": "190b6b13-e8bb-df11-b00f-001d60e938c6",
+    "SOCHI": "4ca3ce97-ee2b-445e-9f69-68ed3bb5f45d",
+    "YEKATERINBURG": "0e0b6b13-e8bb-df11-b00f-001d60e938c6"
+  },
+
+  "CONTRACT_TYPE": {
+    "PAPER": "6ad8a4f8-c33c-4c26-ab1d-4a5e5caca85d",
+    "OFFER": "56c66423-28fd-4663-bfeb-d95b9e68a918"
+  },
+
+  "LOCALE": {
+    "RU-RU": "1a778e3f-0a8e-e111-84a3-00155d054c03",
+    "RU": "685dc0a0-c920-4963-ba51-fbd4c3dc840a",
+    "EN-US": "a5420246-0a8e-e111-84a3-00155d054c03",
+    "ENG": "6ee19907-e3c0-4171-a1a7-7a9197a6c314"
+  },
+
+  "LOST_SUBREASON": {
+    "SMALL_ASSORTMENT": "06436b6b-66f8-4662-bc08-a2c8110edb76"
+  },
+
+  "OPPORTUNITY_COUNTRY": {
+    "RUSSIA": "a570b005-e8bb-df11-b00f-001d60e938c6",
+    "BELARUS": "6525ec6f-8650-45f8-915a-a61b6f3bf09f",
+    "ARMENIA": "0ea9ded1-a4a7-4c5d-9d48-a0a1451ac003",
+    "KAZAKHSTAN": "a770b005-e8bb-df11-b00f-001d60e938c6"
+  },
+
+  "OPPORTUNITY_LOST_REASON": {
+    "CHOSE_ANOTHER_SUPPLIER": "f033bfa7-0a7a-491d-82e4-b12b92a90dd1",
+    "NEEDS_CUSTOM": "e94e7efc-124e-4185-bb47-8276156584b8",
+    "NON_TARGETED": "856847c9-3ddd-4e06-8915-8ceded2a0c61",
+    "POSTPONE": "303e7b87-d81f-4252-ae2b-ee471da64270"
+  },
+
+  "OPPORTUNITY_PAYMENT_TYPE": {
+    "PREPAID": "233ea4fd-942e-4245-8dd7-749229195d93",
+    "QUASIPOSTPAID": "d06e7971-c1ff-4474-9802-6ca3045d56dd",
+    "POSTPAID": "d1868587-2170-4162-b08e-41fcda7fbb40"
+  },
+
+  "OPPORTUNITY_STAGES": {
+    "CONTRACT_CREATION": "129ea394-e143-4745-80cb-7fe7a723f92e",
+    "NEGOTIATIONS": "f808c955-c5aa-4aba-95c0-ba7d584d2f32",
+    "SERVICE_PRESENTATION": "2f9d0b59-7f0e-4ed1-84c8-b475376a3d5f"
+  },
+
+  "PRODUCT": {
+    "MARKET_B2B": "7a504def-f07a-4efb-8805-45e2c83f3014",
+    "REFUELINGS": "54742e3b-6a5a-477d-bda7-f6efbf07fac0",
+    "YANDEX_BUSINESS": "bca98fd6-71cb-46d0-8e42-8de9da65002d",
+    "DELIVERY": "8972c81b-d53f-4436-947b-3018b4961ff6",
+    "TAXI": "f474fc0c-a933-4884-9a7f-e11e132fc993",
+    "FOOD": "1ab43b02-a3cb-449a-ba88-0c4d97844e8c",
+    "DRIVE": "3dde29d5-d53f-4d6b-ae30-10a6c7f60ab6",
+    "PROMOCODES": "46078ea4-c26b-45a4-80dc-459451c276da"
+  },
+
+  "SERVICE_STAGE": {
+    "FIRST_ORDER": "b156b33e-ed47-47e5-8664-d241695d1f6b",
+    "SERVICE_CANCELLATION": "5fab232e-a1db-47a2-ac11-b14624b9fb22",
+    "SERVICE_PRESENTATION": "d59a9c4a-01a8-4f41-ac54-96930aab6476"
+  },
+
+  "COMMUNICATION_TYPE": {
+    "BUSINESS_PHONE_EXT": "185c0524-8447-4af9-978e-88070209b6e9"
+  },
+
+  "USER_ROLE": {
+    "ROLE1": "41d7f9ad-304c-45b4-a089-7e33e900fffc",
+    "ROLE2": "01accf80-a623-427a-b212-3cf0fd209266",
+    "MODERATOR": "036f520a-0c7b-48a0-a6d0-6a066c62187b",
+    "LEAD_MODERATOR": "a7b8f74f-1db4-4832-8dcf-84e384d41d54",
+    "TENDER": "4881ae3f-733d-4e4f-b35f-45ff12a8d193",
+    "LEAD_TENDER": "4d92b1e7-84e8-47a2-91be-778fc9b8869b",
+    "QUALITY_CONTROL": "ec9a5bf1-bf99-4fa8-981a-df43cb2a7141",
+    "LEAD_QUALITY_CONTROL": "2f55b186-778c-4256-8dd4-6fc483a24cb6"
+  }
+}

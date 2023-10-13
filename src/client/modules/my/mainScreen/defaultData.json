@@ -1,0 +1,42 @@
+{
+  "phonesList": {
+    "allValues": [],
+    "value": ""
+  },
+  "contactPhones": {
+    "allValues": [],
+    "value": ""
+  },
+  "noContactPhonesMessage": {
+    "label": "У контакта нет номера телефона. Чтобы совершить звонок, добавь номер на карточке контакта."
+  },
+  "invalidCallAttempt": {
+    "label": "Вы не совершили звонок. Совершите звонок из задачи, чтобы продолжить."
+  },
+  "name": {
+    "allValues": [],
+    "value": "",
+    "customPicklist": true
+  },
+  "subject": {
+    "label": "Цель текущей задачи:",
+    "value": ""
+  },
+  "goOffer": {
+    "label": "GoOffer",
+    "value": false
+  },
+  "goQuestionnaire": {
+    "label": "GoQuestionnaire",
+    "value": false
+  },
+  "result": {
+    "label": "Результат",
+    "allValues": [],
+    "value": ""
+  },
+  "detailedResult": {
+    "label": "Результат подробно:",
+    "value": ""
+  }
+}

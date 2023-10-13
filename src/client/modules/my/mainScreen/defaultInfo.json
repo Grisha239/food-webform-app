@@ -1,0 +1,15 @@
+{
+  "title": "",
+  "category": "",
+  "opportunityId": "",
+  "clientName": "",
+  "contactId": "",
+  "goOffer": false,
+  "goQuestionnaire": false,
+  "status": "",
+  "finalJSON": "",
+  "backMessage": "Назад",
+  "nextMessage": "Далее",
+  "completeMessage": "Сохранить",
+  "pageIndex": 1
+}
