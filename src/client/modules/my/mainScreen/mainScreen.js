@@ -3,7 +3,6 @@ import defaultInfo from './defaultInfo.json';
 import defaultData from './defaultData.json';
 import SETTINGS from '../../utils/constantIds.json';
 import {Utils} from "../../utils/utils";
-const moment = require('moment-business-days');
 
 export default class MainScreen extends Utils {
     @track
@@ -14,9 +13,6 @@ export default class MainScreen extends Utils {
 
     connectedCallback() {
         this.initTimeTable();
-        moment.updateLocale('ru', {
-            workingWeekdays: [1, 2, 3, 4, 5]
-        });
 
         this.sendMsgToParent(JSON.stringify({command: "GetData"}));
 

@@ -1,7 +1,6 @@
 import {LightningElement} from 'lwc';
 import SETTINGS from "./constantIds.json";
 import ACTIVITIES from './activityCategoryIds.json';
-const moment = require('moment-business-days');
 
 const EMPTY_ACTIVITY_OBJECT = {
     'AccountId': '',
@@ -270,16 +269,6 @@ class Utils extends LightningElement {
         });
     }
 
-    getNextCallDate(date, attempts, alwaysGetNextBusinessDay) {
-        let momentDate = moment(date);
-        if (alwaysGetNextBusinessDay || momentDate.hour() >= 16 || attempts >= 2) {
-            momentDate = momentDate.nextBusinessDay();
-            momentDate.set({'hour': 9, 'minute': 0, 'second': 0, 'millisecond': 0});
-        } else {
-            momentDate.add(2, 'hours');
-        }
-        return momentDate.toDate();
-    }
 
     getFormattedDate(date) { //DD-MM-YYYY
         if(date) {
