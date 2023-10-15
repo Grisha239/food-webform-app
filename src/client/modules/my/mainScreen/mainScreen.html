@@ -28,16 +28,16 @@
                 <p class="form-hint" style="margin-bottom: 5px">{questionData.noContactPhonesMessage.label}</p>
             </template>
         </div>
-        <form class="row g-2 needs-validation " novalidate="">
+        <form class="row col-md-3 g-2 needs-validation" novalidate="">
+            <label class="form-label"><br>{questionData.name.label}</label>
             <select class="form-select" id="validationCustom001" data-field="name" required onchange={handleFieldChange}>
                 <template for:each={questionData.name.allValues} for:item="option">
                     <option key={option.Id} selected={option.Selected} value={option.Name}>
                         {option.Name} </option>
                 </template>
             </select>
-            <label class="form-label form-hint">{questionData.subject.label}</label>
-            <label class="form-label">{pageInfo.title}</label>
-            <label class="form-label">{questionData.result.label}</label>
+            <p class="form-label form-hint"><br>{questionData.subject.label}<span class="form-label"> {pageInfo.title}</span></p>
+            <p class="form-label"><br>{questionData.result.label}<b style="color: #ff0000"> *</b></p>
             <select class="form-select" id="validationCustom002" data-field="result" required onchange={handleFieldChange}>
                 <template for:each={questionData.result.allValues} for:item="option">
                     <option key={option.Id} selected={option.Selected} value={option.Name}>
@@ -45,7 +45,7 @@
                 </template>
             </select>
             <div class="col-md-12">
-                <label for="validationCustom003" class="form-label">{questionData.detailedResult.label}<b style="color: #ee3322"> *</b></label>
+                <label for="validationCustom003" class="form-label"><br>{questionData.detailedResult.label}<b style="color: #ee3322"> *</b></label>
                 <textarea rows="4" class="form-control" data-field="detailedResult" id="validationCustom003"
                      onchange={handleFieldChange} required>{questionData.detailedResult.value}</textarea>
             </div>

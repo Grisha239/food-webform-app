@@ -14,6 +14,7 @@
     "label": "Вы не совершили звонок. Совершите звонок из задачи, чтобы продолжить."
   },
   "name": {
+    "label": "Выберите контакт:",
     "allValues": [],
     "value": "",
     "customPicklist": true
@@ -23,11 +24,11 @@
     "value": ""
   },
   "goOffer": {
-    "label": "GoOffer",
+    "label": "Оферта",
     "value": false
   },
   "goQuestionnaire": {
-    "label": "GoQuestionnaire",
+    "label": "Анкета",
     "value": false
   },
   "result": {
@@ -36,7 +37,7 @@
     "value": ""
   },
   "detailedResult": {
-    "label": "Результат подробно:",
+    "label": "Результат подробно",
     "value": ""
   }
 }

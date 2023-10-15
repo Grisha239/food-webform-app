@@ -112,6 +112,11 @@ export default class MainScreen extends Utils {
         if (currentField === "name") {
             this.setContactPhones(this.getContactIdByContactName(evt.target.value));
         }
+        if (currentField === "result") {
+            if (this.questionData.result.value) {
+                this.questionData.result.allValues = this.questionData.result.allValues.filter((x) => x.Name);
+            }
+        }
     }
 
     handleNextClick() {
@@ -122,7 +127,9 @@ export default class MainScreen extends Utils {
 
             let activityData = this.defaultActivityObject;
             activityData.Result = this.questionData.result.value;
-            activityData.DetailedResult = this.questionData.detailedResult.value;;
+            activityData.DetailedResult = this.questionData.detailedResult.value;
+            activityData.GoOffer = this.questionData.GoOffer.value;
+            activityData.GoQuestionnaire = this.questionData.goQuestionnaire.value;
             activityData.Status = SETTINGS.ACTIVITY_STATUS.CLOSED;
             this.updateActivity(activityData);
 
