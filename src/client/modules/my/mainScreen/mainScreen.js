@@ -128,7 +128,7 @@ export default class MainScreen extends Utils {
             let activityData = this.defaultActivityObject;
             activityData.Result = this.questionData.result.value;
             activityData.DetailedResult = this.questionData.detailedResult.value;
-            activityData.GoOffer = this.questionData.GoOffer.value;
+            activityData.GoOffer = this.questionData.goOffer.value;
             activityData.GoQuestionnaire = this.questionData.goQuestionnaire.value;
             activityData.Status = SETTINGS.ACTIVITY_STATUS.CLOSED;
             this.updateActivity(activityData);
