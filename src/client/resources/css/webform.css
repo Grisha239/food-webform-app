@@ -35,6 +35,7 @@ img {
 
 .form-label, .form-check-label, .form-select, .form-control {
     font-size: 13px;
+    margin-bottom: 0px;
     color: #000000;
     font-family: "Bpmonline Open Sans", "Regular", sans-serif;
 }
@@ -42,6 +43,12 @@ img {
 input, b, p, li, textarea, select {
     font-size: 13px;
     font-family: "Bpmonline Open Sans", "Regular", sans-serif;
+}
+
+.form-control {
+    margin: 9px -4px;
+    width: 102.5%;
+    resize: none;
 }
 
 .form-check-input {
