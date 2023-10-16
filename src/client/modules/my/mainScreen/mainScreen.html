@@ -1,10 +1,5 @@
 <template>
     <div style="font-size: 13px;">
-        <datalist id="time-picker-values">
-            <template for:each={timeTable} for:item="option">
-                <option key={option} value={option}></option>
-            </template>
-        </datalist>
         <label class="form-label" for="validationCustom000" style="margin-bottom: 10px">{questionData.name.value}</label>
         <div class="row">
             <template if:true={showClick2Call}>
@@ -49,20 +44,42 @@
                 <textarea rows="4" class="form-control" data-field="detailedResult" id="validationCustom003"
                      onchange={handleFieldChange} required>{questionData.detailedResult.value}</textarea>
             </div>
-            <div class="col-md-12">
-                <div class="form-check">
-                    <label for="validationCustom004" class="form-label">{questionData.goOffer.label}</label>
-                    <input class="form-check-input" type="checkbox" id="validationCustom004" data-field="goOffer"
-                           oninput={handleFieldChange} checked={questionData.goOffer.value}>
+            <template if:true={showGoOffer}>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <label for="validationCustom004" class="form-check-label">{questionData.goOffer.label}</label>
+                        <input class="form-check-input" type="checkbox" id="validationCustom004" data-field="goOffer"
+                               oninput={handleFieldChange} checked={questionData.goOffer.value}>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-12">
-                <div class="form-check">
-                    <label for="validationCustom005" class="form-label">{questionData.goQuestionnaire.label}</label>
-                    <input class="form-check-input" type="checkbox" id="validationCustom005" data-field="goQuestionnaire"
-                           oninput={handleFieldChange} checked={questionData.goQuestionnaire.value}>
+            </template>
+            <template if:true={showGoQuestionnaire}>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <label for="validationCustom005" class="form-check-label">{questionData.goQuestionnaire.label}</label>
+                        <input class="form-check-input" type="checkbox" id="validationCustom005" data-field="goQuestionnaire"
+                               oninput={handleFieldChange} checked={questionData.goQuestionnaire.value}>
+                    </div>
                 </div>
-            </div>
+            </template>
+            <template if:true={showGoIsZoneCreated}>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <label for="validationCustom006" class="form-check-label">{questionData.goIsZoneCreated.label}</label>
+                        <input class="form-check-input" type="checkbox" id="validationCustom006" data-field="goIsZoneCreated"
+                               oninput={handleFieldChange} checked={questionData.goIsZoneCreated.value}>
+                    </div>
+                </div>
+            </template>
+            <template if:true={showGoIsMenuFull}>
+                <div class="col-md-12">
+                    <div class="form-check">
+                        <label for="validationCustom007" class="form-check-label">{questionData.goIsMenuFull.label}</label>
+                        <input class="form-check-input" type="checkbox" id="validationCustom007" data-field="goIsMenuFull"
+                               oninput={handleFieldChange} checked={questionData.goIsMenuFull.value}>
+                    </div>
+                </div>
+            </template>
         </form>
 
         <br>

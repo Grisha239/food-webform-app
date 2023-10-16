@@ -31,6 +31,14 @@
     "label": "Анкета",
     "value": false
   },
+  "goIsZoneCreated": {
+    "label": "Зона создана",
+    "value": false
+  },
+  "goIsMenuFull": {
+    "label": "Меню заполнено",
+    "value": false
+  },
   "result": {
     "label": "Результат",
     "allValues": [],

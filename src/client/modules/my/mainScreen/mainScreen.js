@@ -38,16 +38,14 @@ export default class MainScreen extends Utils {
 
                     this.pageInfo.goOffer = info.GoOffer;
                     this.pageInfo.goQuestionnaire = info.GoQuestionnaire;
+                    this.pageInfo.goIsZoneCreated = info.GoIsZoneCreated;
+                    this.pageInfo.goIsMenuFull = info.GoIsMenuFull;
 
                     this.pageInfo.detailedResult = info.DetailedResult || "";
                     this.pageInfo.callIsMade = false;
                     this.pageInfo.nextButtonPressed = false;
-                    this.localization = info.locale;
-                    if(info.locale !== SETTINGS.LOCALE["RU-RU"]) {
-                        this.translateLabels(info.locale);
-                    } else {
-                        this.fillDefaultValues();
-                    }
+
+                    this.fillDefaultValues();
                 }
                 else if (command === 'SetContactData') {
                     if (info.length !== 0) {
@@ -71,44 +69,32 @@ export default class MainScreen extends Utils {
         }
     }
 
-    translateLabels(locale) {
-        if(locale === SETTINGS.LOCALE["EN-US"]) {
-            import('./locale/en-US.json').then((localization) => {
-                this.localizeButtons(localization);
-                this.localizeGeneralFields(localization);
-                this.translateAdditionalFields(localization);
-                this.fillDefaultValues();
-            });
-        }
-    }
-
-    translateAdditionalFields(localization) {
-        this.questionData.comment.value = localization.comment.value;
-        this.questionData.declineReason.selected = localization.declineReason.selected;
-        this.questionData.emailSubject.value = localization.emailSubject.value;
-        this.questionData.callResultUnsuccessful.value = localization.callResultUnsuccessful.value;
-    }
-
     fillDefaultValues() {
         this.questionData.goOffer.value = this.pageInfo.goOffer;
         this.questionData.goQuestionnaire.value = this.pageInfo.goQuestionnaire;
-    }
-
-    get isLastPage() {
-        return true;
+        this.questionData.goIsZoneCreated = this.pageInfo.goIsZoneCreated;
+        this.questionData.goIsMenuFull = this.pageInfo.goIsMenuFull;
     }
 
     get showGoOffer() {
-        return !this.pageInfo.goOffer;
+        return !this.pageInfo.goOffer && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
     }
 
     get showGoQuestionnaire() {
-        return !this.pageInfo.goQuestionnaire;
+        return !this.pageInfo.goQuestionnaire && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
+    }
+
+    get showGoIsZoneCreated() {
+        return !this.pageInfo.goIsZoneCreated && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
+    }
+
+    get showGoIsMenuFull() {
+        return !this.pageInfo.goIsMenuFull && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
     }
 
     handleFieldChange(evt) {
-        let currentField = evt.target.dataset.field;
         super.handleFieldChange(evt);
+        let currentField = evt.target.dataset.field;
         if (currentField === "name") {
             this.setContactPhones(this.getContactIdByContactName(evt.target.value));
         }
@@ -130,6 +116,8 @@ export default class MainScreen extends Utils {
             activityData.DetailedResult = this.questionData.detailedResult.value;
             activityData.GoOffer = this.questionData.goOffer.value;
             activityData.GoQuestionnaire = this.questionData.goQuestionnaire.value;
+            activityData.GoIsZoneCreated = this.questionData.goIsZoneCreated.value;
+            activityData.GoIsMenuFull = this.questionData.goIsMenuFull.value;
             activityData.Status = SETTINGS.ACTIVITY_STATUS.CLOSED;
             this.updateActivity(activityData);
 
