@@ -72,8 +72,8 @@ export default class MainScreen extends Utils {
     fillDefaultValues() {
         this.questionData.goOffer.value = this.pageInfo.goOffer;
         this.questionData.goQuestionnaire.value = this.pageInfo.goQuestionnaire;
-        this.questionData.goIsZoneCreated = this.pageInfo.goIsZoneCreated;
-        this.questionData.goIsMenuFull = this.pageInfo.goIsMenuFull;
+        this.questionData.goIsZoneCreated.value = this.pageInfo.goIsZoneCreated;
+        this.questionData.goIsMenuFull.value = this.pageInfo.goIsMenuFull;
     }
 
     get showGoOffer() {
