@@ -671,14 +671,6 @@ class Utils extends LightningElement {
         }
     }
 
-    handleRejection(evt) {
-        if(this.isPage2) {
-            this.questionData.rejectionsScreen2.selected = JSON.parse(evt.detail);
-        } else if(this.isPage3) {
-            this.questionData.rejectionsScreen3.selected = JSON.parse(evt.detail);
-        }
-    }
-
     handleMultiPicklist(info) {
         let picklist = this.getPicklist(info.picklist);
         picklist.selected = info.values;
@@ -688,34 +680,6 @@ class Utils extends LightningElement {
         picklist.matchByColumn = info.matchByColumn;
         picklist.matchById = info.matchById;
         picklist.mainColumn = info.mainColumn;
-    }
-
-    localizeGeneralFields(localization) {
-        for(const field in localization) {
-            if(this.questionData[field]) {
-                this.questionData[field].label = localization[field].label;
-                if(this.questionData[field].radio) {
-                    this.questionData[field].labelYes = localization[field].labelYes;
-                    this.questionData[field].labelNo = localization[field].labelNo;
-                    this.questionData[field].labelLater = localization[field].labelLater;
-                    this.questionData[field].labelMaybe = localization[field].labelMaybe;
-                }
-            }
-        }
-    }
-
-    localizeButtons(localization) {
-        this.pageInfo.backMessage = localization.backMessage;
-        this.pageInfo.nextMessage = localization.nextMessage;
-        this.pageInfo.completeMessage = localization.completeMessage;
-    }
-
-    handleBackClick() {
-        this.pageInfo.pageIndex--;
-    }
-
-    get nextClickMessage() {
-        return this.isLastPage ? this.pageInfo.completeMessage : this.pageInfo.nextMessage;
     }
 
     handleClickToCall() {
