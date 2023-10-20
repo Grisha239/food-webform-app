@@ -32,7 +32,8 @@
             </select>
             <p class="form-label form-hint"><br>{questionData.subject.label}<span class="form-label"> {pageInfo.title}</span></p>
             <template if:true={showPrevComment}>
-                <p class="form-label"><br>{pageInfo.goPreviousActivityComment}</p>
+                <p class="form-label"><br>{questionData.goPreviousActivityComment}</p>
+                <p class="form-label">{pageInfo.goPreviousActivityComment}</p>
             </template>
             <p class="form-label"><br>{questionData.result.label}<b style="color: #ff0000"> *</b></p>
             <select class="form-select" id="validationCustom002" data-field="result" required onchange={handleFieldChange}>

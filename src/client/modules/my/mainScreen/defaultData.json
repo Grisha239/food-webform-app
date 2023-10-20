@@ -39,6 +39,7 @@
     "label": "Меню заполнено",
     "value": false
   },
+  "goPreviousActivityComment": "Комментарий с предыдущей активности:",
   "result": {
     "label": "Результат",
     "allValues": [],
