@@ -155,7 +155,7 @@ export default class MainScreen extends Utils {
     setContactPhones(contactId) {
         let allowedTypes = Object.values(SETTINGS.COMMUNICATION_TYPE);
         this.questionData.contactPhones.allValues = this.questionData.phonesList.allValues.filter(x => x.ContactId === contactId);
-        this.questionData.contactPhones.allValues = this.questionData.contactPhones.allValues.filter(x => allowedTypes.includes(x.CommunicationType));
+        this.questionData.contactPhones.allValues = this.questionData.contactPhones.allValues.filter(x => allowedTypes.includes(x.CommunicationType.value));
         this.questionData.contactPhones.value = this.questionData.contactPhones.allValues.find(function(x) {x.ContactId === contactId});
         this.selectPicklistOption('contactPhones', contactId, 'ContactId');
     }
