@@ -1,5 +1,27 @@
 <template>
     <div style="font-size: 13px;">
+        <div class="row">
+            <template if:true={showClick2Call}>
+                <div class="col-3" style="margin-bottom: 15px">
+                    <select class="form-select" id="validationCustom000" data-field="contactPhones" onchange={handleFieldChange}>
+                        <template for:each={questionData.contactPhones.allValues} for:item="option">
+                            <option key={option.Id} selected={option.Selected} value={option.Number}>
+                                {option.Number} </option>
+                        </template>
+                    </select>
+                </div>
+                <div class="col" style="padding-left: 0">
+                    <button id="click-2-call" data-bs-toggle="button" class="btn btn-success" style="height: 35px; width: 40px" onclick={handleClickToCall}>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-telephone" width="100%" height="">
+                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </template>
+            <template if:false={showClick2Call}>
+                <p class="form-hint" style="margin-bottom: 5px">{questionData.noContactPhonesMessage.label}</p>
+            </template>
+        </div>
         <form class="row col-md-3 g-2 needs-validation" novalidate="">
             <label class="form-label"><br>{questionData.name.label}</label>
             <select class="form-select" style="margin-bottom: 15px" id="validationCustom001" data-field="name" required onchange={handleFieldChange}>
@@ -8,28 +30,6 @@
                         {option.Name} </option>
                 </template>
             </select>
-            <div class="row">
-                <template if:true={showClick2Call}>
-                    <div class="col-9" style="margin-bottom: 15px; margin-left: -12px">
-                        <select class="form-select" id="validationCustom000" data-field="contactPhones" onchange={handleFieldChange}>
-                            <template for:each={questionData.contactPhones.allValues} for:item="option">
-                                <option key={option.Id} selected={option.Selected} value={option.Number}>
-                                    {option.Number} </option>
-                            </template>
-                        </select>
-                    </div>
-                    <div class="col" style="padding-left: 0">
-                        <button id="click-2-call" data-bs-toggle="button" class="btn btn-success" style="height: 35px; width: 40px" onclick={handleClickToCall}>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-telephone" width="100%" height="">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </template>
-                <template if:false={showClick2Call}>
-                    <p class="form-hint" style="margin-bottom: 5px">{questionData.noContactPhonesMessage.label}</p>
-                </template>
-            </div>
             <p class="form-label form-hint"><br>{questionData.subject.label}<span class="form-label"> {pageInfo.title}</span></p>
             <template if:true={showPrevComment}>
                 <p class="form-label"><br>{pageInfo.goPreviousActivityComment}</p>
