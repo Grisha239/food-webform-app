@@ -44,6 +44,13 @@
     "allValues": [],
     "value": ""
   },
+  "nextTaskDate": {
+    "label": "Когда перезвонить?",
+    "date": null,
+    "time": null,
+    "value": null,
+    "utility": true
+  },
   "detailedResult": {
     "label": "Результат подробно",
     "value": ""

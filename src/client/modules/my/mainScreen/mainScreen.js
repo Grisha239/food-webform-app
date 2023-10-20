@@ -40,6 +40,7 @@ export default class MainScreen extends Utils {
                     this.pageInfo.goQuestionnaire = info.GoQuestionnaire;
                     this.pageInfo.goIsZoneCreated = info.GoIsZoneCreated;
                     this.pageInfo.goIsMenuFull = info.GoIsMenuFull;
+                    this.pageInfo.goPreviousActivityComment = info.GoPreviousActivityComment;
 
                     this.pageInfo.detailedResult = info.DetailedResult || "";
                     this.pageInfo.callIsMade = false;
@@ -92,6 +93,14 @@ export default class MainScreen extends Utils {
         return !this.pageInfo.goIsMenuFull && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
     }
 
+    get showCallTime() {
+        return Object.values(SETTINGS.RESULTS).find(x => x === this.questionData.result.value);
+    }
+
+    get showPrevComment() {
+        return this.pageInfo.goPreviousActivityComment;
+    }
+
     handleFieldChange(evt) {
         super.handleFieldChange(evt);
         let currentField = evt.target.dataset.field;
@@ -119,6 +128,7 @@ export default class MainScreen extends Utils {
             activityData.GoIsZoneCreated = this.questionData.goIsZoneCreated.value;
             activityData.GoIsMenuFull = this.questionData.goIsMenuFull.value;
             activityData.Status = SETTINGS.ACTIVITY_STATUS.CLOSED;
+            activityData.GoCallbackDate = this.questionData.nextTaskDate.value;
             this.updateActivity(activityData);
 
             this.handleComplete();
@@ -143,7 +153,9 @@ export default class MainScreen extends Utils {
     }
 
     setContactPhones(contactId) {
-        this.questionData.contactPhones.allValues = this.questionData.phonesList.allValues.filter((x) => (x.ContactId === contactId));
+        let allowedTypes = Object.values(SETTINGS.COMMUNICATION_TYPE);
+        this.questionData.contactPhones.allValues = this.questionData.phonesList.allValues.filter(x => x.ContactId === contactId);
+        this.questionData.contactPhones.allValues = this.questionData.contactPhones.allValues.filter(x => allowedTypes.includes(x.CommunicationType));
         this.questionData.contactPhones.value = this.questionData.contactPhones.allValues.find(function(x) {x.ContactId === contactId});
         this.selectPicklistOption('contactPhones', contactId, 'ContactId');
     }
