@@ -11,5 +11,6 @@
   "backMessage": "Назад",
   "nextMessage": "Далее",
   "completeMessage": "Сохранить",
+  "closeMessage": "Закрыть",
   "pageIndex": 1
 }

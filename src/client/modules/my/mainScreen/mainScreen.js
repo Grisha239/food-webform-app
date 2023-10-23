@@ -182,4 +182,8 @@ export default class MainScreen extends Utils {
             super.selectPicklistOption(picklistName, optionName, picklistField);
         }
     }
+
+    onCloseFormClick() {
+        this.sendMsgToParent(JSON.stringify({command: "CompleteForm"}));
+    }
 }
