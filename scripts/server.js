@@ -8,7 +8,7 @@ const app = express();
 app.use(helmet({
     contentSecurityPolicy: {
         directives: {
-            "frame-ancestors": ["self", "http://dev1.nau.io:8018/"]
+            "frame-ancestors": ["self", "http://dev1.nau.io:8018/", "https://restaurants.yacrm.taxi.tst.yandex.net/"]
         }
     }
 }));
