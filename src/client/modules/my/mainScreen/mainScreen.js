@@ -5,6 +5,7 @@ import SETTINGS from '../../utils/constantIds.json';
 import {Utils} from "../../utils/utils";
 
 export default class MainScreen extends Utils {
+    dataLoaded = false;
     @track
     pageInfo = defaultInfo;
 
@@ -26,8 +27,10 @@ export default class MainScreen extends Utils {
                 let info = message.data;
 
                 if (command === 'SetData') {
+                    this.dataLoaded = true;
                     this.pageInfo.activityId = info.ActivityId;
                     this.pageInfo.activityCategory = info.ActivityCategory?.value;
+                    this.pageInfo.activityType = info.ActivityType?.value;
                     this.pageInfo.category = info.ActivityCategory?.value;
                     this.pageInfo.title = info.ActivityTitle;
                     this.pageInfo.opportunityId = info.OpportunityId;
@@ -68,6 +71,11 @@ export default class MainScreen extends Utils {
                 console.log('ERROR: No message received!');
             }
         }
+    }
+
+    get showWebForm() {
+        return this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.CALL &&
+            this.pageInfo.activityType === SETTINGS.ACTIVITY_TYPE.ACTIVITY;
     }
 
     fillDefaultValues() {
