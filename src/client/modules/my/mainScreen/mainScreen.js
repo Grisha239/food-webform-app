@@ -44,6 +44,7 @@ export default class MainScreen extends Utils {
                     this.pageInfo.goIsZoneCreated = info.GoIsZoneCreated;
                     this.pageInfo.goIsMenuFull = info.GoIsMenuFull;
                     this.pageInfo.goPreviousActivityComment = info.GoPreviousActivityComment;
+                    this.pageInfo.goCreatedAutomaticallyProcessOnbording = info.GoCreatedAutomaticallyProcessOnbording;
 
                     this.pageInfo.detailedResult = info.DetailedResult || "";
                     this.pageInfo.callIsMade = false;
@@ -85,20 +86,24 @@ export default class MainScreen extends Utils {
         this.questionData.goIsMenuFull.value = this.pageInfo.goIsMenuFull;
     }
 
+    isOnbording() {
+        return this.pageInfo.goCreatedAutomaticallyProcessOnbording && this.pageInfo.category === SETTINGS.ACTIVITY_CATEGORY.CALL;
+    }
+
     get showGoOffer() {
-        return !this.pageInfo.goOffer && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
+        return !this.pageInfo.goOffer && this.isOnbording();
     }
 
     get showGoQuestionnaire() {
-        return !this.pageInfo.goQuestionnaire && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
+        return !this.pageInfo.goQuestionnaire && this.isOnbording();
     }
 
     get showGoIsZoneCreated() {
-        return !this.pageInfo.goIsZoneCreated && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
+        return !this.pageInfo.goIsZoneCreated && this.isOnbording();
     }
 
     get showGoIsMenuFull() {
-        return !this.pageInfo.goIsMenuFull && this.pageInfo.activityCategory === SETTINGS.ACTIVITY_CATEGORY.PARTNER_REMINDER;
+        return !this.pageInfo.goIsMenuFull && this.isOnbording();
     }
 
     get showCallTime() {
