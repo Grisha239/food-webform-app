@@ -13,7 +13,7 @@
     </template>
     <template if:true={showWebForm}>
         <div style="font-size: 13px;">
-            <div class="col-md-12 buttons-container float-end">
+            <div class="float-end buttons-container">
                 <button class="button-close" onclick={onCloseFormClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
@@ -30,7 +30,7 @@
                 </select>
                 <div class="row g-0">
                     <template if:true={showClick2Call}>
-                        <div class="col-3" style="margin-bottom: 15px; margin-right: 10px">
+                        <div class="col-6" style="margin-bottom: 15px; margin-right: 10px">
                             <select class="form-select" id="validationCustom000" data-field="contactPhones" onchange={handleFieldChange}>
                                 <template for:each={questionData.contactPhones.allValues} for:item="option">
                                     <option key={option.Id} selected={option.Selected} value={option.Number}>
